@@ -7,16 +7,10 @@
  */
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 {
-
-
-
-
-
-
+	if (func && tree)
+		func(tree->n);
 	if (tree) /* depth-first search */
-	{
-		binary_tree_delete(tree->left);
-		binary_tree_delete(tree->right);
-		free(tree); /* post-order traversal */
-	}
+		binary_tree_preorder(tree->left, func);
+	if (tree)
+		binary_tree_preorder(tree->right, func);
 }
