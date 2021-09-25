@@ -31,8 +31,8 @@ void binary_tree_print(const binary_tree_t *);
 void print_num(int n);
 /* half branch count */
 size_t binary_tree_halfbranch(const binary_tree_t *tree);
-/* power of 2 */
-int power_rangers(int zords); /* O(1) */
+/* power of 2, O(1) */
+int power_rangers(int zords);
 /* major functions */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
