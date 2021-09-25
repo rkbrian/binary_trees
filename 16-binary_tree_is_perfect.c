@@ -35,17 +35,17 @@ int power_rangers(int zords)
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-        size_t i = 0, lefti, righti;
+	size_t i = 0, lefti, righti;
 
-        if (!tree || (tree->left == NULL && tree->right == NULL))
-                return (0);
-        lefti = binary_tree_height(tree->left);
-        righti = binary_tree_height(tree->right);
-        if (lefti >= righti)
-                i = lefti;
-        else
-                i = righti;
-        return (i + 1);
+	if (!tree || (tree->left == NULL && tree->right == NULL))
+		return (0);
+	lefti = binary_tree_height(tree->left);
+	righti = binary_tree_height(tree->right);
+	if (lefti >= righti)
+		i = lefti;
+	else
+		i = righti;
+	return (i + 1);
 }
 
 /**
@@ -58,7 +58,7 @@ size_t binary_tree_size(const binary_tree_t *tree)
 	size_t i = 0, left_i, right_i;
 
 	if (!tree)
-		return(0);
+		return (0);
 	else if (tree->left == NULL && tree->right == NULL)
 		return (1);
 	left_i = binary_tree_size(tree->left);
