@@ -10,7 +10,9 @@
 ## Function Index
 ### (for files statrting with "number"-binary_tree_"suffix".c)
 #### Basics:
-| 0. New node:		| function that creates a binary tree node
+| Task			| Descriptions								|
+|-----------------------------------------------------------------------------------------------|
+| 0. New node:		| function that creates a binary tree node				|
 | 1. Insert left:	| function that inserts a node as the left-child of another node	|
 | 2. Insert right:	| function that inserts a node as the right-child of another node	|
 | 3. Delete:		| function that deletes an entire binary tree	     	     		|
@@ -30,6 +32,8 @@
 | 17. Sibling:		| function that finds the sibling of a node				|
 | 18. Uncle:		| function that finds the uncle of a node				|
 #### Advanced: (19 starts with 100, etc)
+| Task	       		      | Descriptions									|
+|---------------------------------------------------------------------------------------------------------------|
 | 19. Lowest common ancestor: | function that finds the lowest common ancestor of two nodes			|
 | 20. Level-order traversal:  | function that goes through a binary tree using level-order traversal		|
 | 21. Is complete:	      | function that checks if a binary tree is complete	   			|
@@ -41,7 +45,7 @@
 | 27. BST - Search:  	      | function that searches for a value in a Binary Search Tree			|
 | 28. BST - Remove:	      | function that removes a node from a Binary Search Tree				|
 | 29. Big O #BST:	      | the average time complexities of those operations on a Binary Search Tree	|
-| - Inserting the value n     	    	    	 	      	       		       	      	     		|
-| - Removing the node with the value n										|
-| - Searching for a node in a BST of size n									|
+|     	    		      | - Inserting the value n  	      		       	      	     		|
+|			      | - Removing the node with the value n						|
+|			      | - Searching for a node in a BST of size n					|
 | 30. Is AVL: 	    	      | function that checks if a binary tree is a valid AVL Tree			|
