@@ -12,7 +12,7 @@
 #### Basics:
 
 | Task              | Descriptions                                                              |
-|-----------------------------------------------------------------------------------------------|
+|-------------------|---------------------------------------------------------------------------|
 | 0 New node        | function that creates a binary tree node					|
 | 1 Insert left     | function that inserts a node as the left-child of another node		|
 | 2 Insert right    | function that inserts a node as the right-child of another node		|
@@ -36,18 +36,18 @@
 #### Advanced: (19 starts with 100, etc)
 
 | Task	       		      | Descriptions									|
-|---------------------------------------------------------------------------------------------------------------|
-| 19 Lowest common ancestor  | function that finds the lowest common ancestor of two nodes			|
-| 20 Level-order traversal   | function that goes through a binary tree using level-order traversal		|
+|-----------------------------|---------------------------------------------------------------------------------|
+| 19 Lowest common ancestor   | function that finds the lowest common ancestor of two nodes			|
+| 20 Level-order traversal    | function that goes through a binary tree using level-order traversal		|
 | 21 Is complete	      | function that checks if a binary tree is complete	   			|
 | 22 Rotate left	      | function that performs a left-rotation on a binary tree				|
 | 23 Rotate right	      | function that performs a right-rotation on a binary tree			|
 | 24 Is BST		      | function that checks if a binary tree is a valid Binary Search Tree		|
 | 25 BST - Insert	      | function that inserts a value in a Binary Search Tree	       			|
-| 26 BST - Array to BST      | function that builds a Binary Search Tree from an array				|
+| 26 BST - Array to BST       | function that builds a Binary Search Tree from an array				|
 | 27 BST - Search  	      | function that searches for a value in a Binary Search Tree			|
 | 28 BST - Remove	      | function that removes a node from a Binary Search Tree				|
-| 29 Big O #BST	      | the average time complexities of those operations on a Binary Search Tree	|
+| 29 Big O #BST	      	      | the average time complexities of those operations on a Binary Search Tree	|
 |     	    		      | - Inserting the value n  	      		       	      	     		|
 |			      | - Removing the node with the value n						|
 |			      | - Searching for a node in a BST of size n					|
