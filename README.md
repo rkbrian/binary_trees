@@ -11,44 +11,44 @@
 ### (for files statrting with "number"-binary_tree_"suffix".c)
 #### Basics:
 
-| Task			| Descriptions								|
+| Task              | Descriptions                                                              |
 |-----------------------------------------------------------------------------------------------|
-| 0 New node:		| function that creates a binary tree node				|
-| 1 Insert left:	| function that inserts a node as the left-child of another node	|
-| 2 Insert right:	| function that inserts a node as the right-child of another node	|
-| 3 Delete:		| function that deletes an entire binary tree	     	     		|
-| 4 Is leaf:		| function that checks if a node is a leaf				|
-| 5 Is root:		| function that checks if a given node is a root			|
-| 6 Pre-order trav: 	| function that goes through a binary tree using pre-order traversal	|
-| 7 In-order trav:	| function that goes through a binary tree using in-order traversal	|
-| 8 Post-order trav:	| function that goes through a binary tree using post-order traversal	|
-| 9 Height:		| function that measures the height of a binary tree	    		|
-| 10 Depth:		| function that measures the depth of a node in a binary tree		|
-| 11 Size:		| function that measures the size of a binary tree	 		|
-| 12 Leaves:		| function that counts the leaves in a binary tree			|
-| 13 Nodes:		| function that counts the nodes with at least 1 child in a binary tree	|
-| 14 Balance factor:	| function that measures the balance factor of a binary tree	   	|
-| 15 Is full:		| function that checks if a binary tree is full	 			|
-| 16 Is perfect:	| function that checks if a binary tree is perfect			|
-| 17 Sibling:		| function that finds the sibling of a node				|
-| 18 Uncle:		| function that finds the uncle of a node				|
+| 0 New node        | function that creates a binary tree node					|
+| 1 Insert left     | function that inserts a node as the left-child of another node		|
+| 2 Insert right    | function that inserts a node as the right-child of another node		|
+| 3 Delete          | function that deletes an entire binary tree	     	     		|
+| 4 Is leaf         | function that checks if a node is a leaf					|
+| 5 Is root         | function that checks if a given node is a root				|
+| 6 Pre-order trav  | function that goes through a binary tree using pre-order traversal	|
+| 7 In-order trav   | function that goes through a binary tree using in-order traversal		|
+| 8 Post-order trav | function that goes through a binary tree using post-order traversal	|
+| 9 Height          | function that measures the height of a binary tree	    		|
+| 10 Depth          | function that measures the depth of a node in a binary tree		|
+| 11 Size           | function that measures the size of a binary tree	 			|
+| 12 Leaves         | function that counts the leaves in a binary tree				|
+| 13 Nodes          | function that counts the nodes with at least 1 child in a binary tree	|
+| 14 Balance factor | function that measures the balance factor of a binary tree	   	|
+| 15 Is full        | function that checks if a binary tree is full	 			|
+| 16 Is perfect     | function that checks if a binary tree is perfect				|
+| 17 Sibling        | function that finds the sibling of a node					|
+| 18 Uncle          | function that finds the uncle of a node					|
 
 #### Advanced: (19 starts with 100, etc)
 
 | Task	       		      | Descriptions									|
 |---------------------------------------------------------------------------------------------------------------|
-| 19 Lowest common ancestor:  | function that finds the lowest common ancestor of two nodes			|
-| 20 Level-order traversal:   | function that goes through a binary tree using level-order traversal		|
-| 21 Is complete:	      | function that checks if a binary tree is complete	   			|
-| 22 Rotate left:	      | function that performs a left-rotation on a binary tree				|
-| 23 Rotate right:	      | function that performs a right-rotation on a binary tree			|
-| 24 Is BST:		      | function that checks if a binary tree is a valid Binary Search Tree		|
-| 25 BST - Insert:	      | function that inserts a value in a Binary Search Tree	       			|
-| 26 BST - Array to BST:      | function that builds a Binary Search Tree from an array				|
-| 27 BST - Search:  	      | function that searches for a value in a Binary Search Tree			|
-| 28 BST - Remove:	      | function that removes a node from a Binary Search Tree				|
-| 29 Big O #BST:	      | the average time complexities of those operations on a Binary Search Tree	|
+| 19 Lowest common ancestor  | function that finds the lowest common ancestor of two nodes			|
+| 20 Level-order traversal   | function that goes through a binary tree using level-order traversal		|
+| 21 Is complete	      | function that checks if a binary tree is complete	   			|
+| 22 Rotate left	      | function that performs a left-rotation on a binary tree				|
+| 23 Rotate right	      | function that performs a right-rotation on a binary tree			|
+| 24 Is BST		      | function that checks if a binary tree is a valid Binary Search Tree		|
+| 25 BST - Insert	      | function that inserts a value in a Binary Search Tree	       			|
+| 26 BST - Array to BST      | function that builds a Binary Search Tree from an array				|
+| 27 BST - Search  	      | function that searches for a value in a Binary Search Tree			|
+| 28 BST - Remove	      | function that removes a node from a Binary Search Tree				|
+| 29 Big O #BST	      | the average time complexities of those operations on a Binary Search Tree	|
 |     	    		      | - Inserting the value n  	      		       	      	     		|
 |			      | - Removing the node with the value n						|
 |			      | - Searching for a node in a BST of size n					|
-| 30 Is AVL: 	    	      | function that checks if a binary tree is a valid AVL Tree			|
+| 30 Is AVL 	    	      | function that checks if a binary tree is a valid AVL Tree			|
