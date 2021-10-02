@@ -1,6 +1,8 @@
 #ifndef BINARY_TREES_H
 #define BINARY_TREES_H
 
+#define MAX_Q_SIZE 1024
+
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,6 +27,13 @@ typedef struct binary_tree_s binary_tree_t;
 typedef struct binary_tree_s bst_t;
 typedef struct binary_tree_s avl_t;
 typedef struct binary_tree_s heap_t;
+typedef struct queue_s
+{
+	int head; /* position */
+	int tail; /* position */
+	binary_tree_t *queue_arr[MAX_Q_SIZE]; /* array of tree nodes */
+} queue_q;
+
 /* tree printer */
 void binary_tree_print(const binary_tree_t *);
 /* single node printer */
@@ -56,6 +65,8 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 /* Advanced helpers */
 void launch_test(binary_tree_t *n1, binary_tree_t *n2);
 binary_tree_t *same_gen(const binary_tree_t *gen_a, const binary_tree_t *gen_b);
+int queue_store(queue_q *queen, const binary_tree_t *node);
+binary_tree_t *queue_remove(queue_q *queen, const binary_tree_t *node);
 /* Advanced */
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));

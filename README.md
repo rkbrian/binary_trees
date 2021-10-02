@@ -7,9 +7,10 @@
 - What are the different traversal methods to go through a binary tree
 - What is a complete, a full, a perfect, a balanced binary tree
 
-## Function Index
-### (for files statrting with "number"-binary_tree_"suffix".c)
+## Task Table
+### (for files statrting with "number"-binary_tree"suffix".c)
 #### Basics:
+(progress: all completed):coffee::cowboy_hat_face:
 
 | Task              | Descriptions                                                              |
 |-------------------|---------------------------------------------------------------------------|
@@ -33,7 +34,8 @@
 | 17 Sibling        | function that finds the sibling of a node					|
 | 18 Uncle          | function that finds the uncle of a node					|
 
-#### Advanced: (19 starts with 100, etc)
+#### Advanced: (file for no. 19 starts with 100, etc)
+(progress: 5% completed):radioactive:
 
 | Task	       		      | Descriptions									|
 |-----------------------------|---------------------------------------------------------------------------------|
