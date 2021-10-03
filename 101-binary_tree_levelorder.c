@@ -53,7 +53,7 @@ int queue_store(queue_q *queen, const binary_tree_t *node)
  * queue_remove - extract node data from queue
  * @queen: the queue
  * @node: tree node of the same depth (from root)
- * Return: 0 if success, 1 if failed
+ * Return: node pointer with acquired data if success, null if failed
  */
 binary_tree_t *queue_remove(queue_q *queen, const binary_tree_t *node)
 {
