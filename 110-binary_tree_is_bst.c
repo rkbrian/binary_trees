@@ -74,8 +74,8 @@ binary_tree_t *queue_remove(queue_q *queen, const binary_tree_t *node)
 }
 
 /**
- * binary_tree_preorder - goes through a binary tree using pre-order traversal
- * @node: pointer to a child of the root node of the tree to traverse
+ * beast_wars - compare all values in a tree with root value for BST validity
+ * @tree: pointer to a child of the root node of the tree to traverse
  * @root_num: root node value
  * @direction: 0 if node is left child, 1 for right child
  * Return: 0 for valid bst, 1 otherwise
