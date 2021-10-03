@@ -35,7 +35,7 @@
 | 18 Uncle          | function that finds the uncle of a node										           |
 
 #### Advanced: (file for no. 19 starts with 100, etc)
-(progress: 20% completed):radioactive:
+(progress: 26% completed):radioactive:
 
 | Task				      | Descriptions									|
 |-----------------------------|---------------------------------------------------------------------------------|
@@ -44,8 +44,8 @@
 | 21 Is complete       | function that checks if a binary tree is complete        	   				 |
 | 22 Rotate left             | function that performs a left-rotation on a binary tree					    |
 | 23 Rotate right	           | function that performs a right-rotation on a binary tree				      |
-| 24 Is BST 			         | function that checks if a binary tree is a valid Binary Search Tree		       |
-| 25 BST - Insert			       | function that inserts a value in a Binary Search Tree	         	         |
+| 24 Is BST 		         | function that checks if a binary tree is a valid Binary Search Tree		       |
+| 25 BST - Insert :thinking:		       | function that inserts a value in a Binary Search Tree	         	         |
 | 26 BST - Array to BST       | function that builds a Binary Search Tree from an array	   	  				  |
 | 27 BST - Search         | function that searches for a value in a Binary Search Tree						    |
 | 28 BST - Remove	        | function that removes a node from a Binary Search Tree					       |
