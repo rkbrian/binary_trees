@@ -37,20 +37,20 @@
 #### Advanced: (file for no. 19 starts with 100, etc)
 (progress: 35% completed):radioactive:
 
-| Task			      | Descriptions									|
-|-----------------------------|---------------------------------------------------------------------------------|
-| 19 Lowest common ancestor   | function that finds the lowest common ancestor of two nodes			|
-| 20 Level-order traversal    | function that goes through a binary tree using level-order traversal		|
-| 21 Is complete       	      | function that checks if a binary tree is complete      	   			|
-| 22 Rotate left              | function that performs a left-rotation on a binary tree				|
-| 23 Rotate right	      | function that performs a right-rotation on a binary tree			|
-| 24 Is BST 		      | function that checks if a binary tree is a valid Binary Search Tree		|
-| 25 BST - Insert 	      | function that inserts a value in a Binary Search Tree				|
-| 26 BST - Array to BST	      | function that builds a Binary Search Tree from an array	   	  		|
-| 27 BST - Search :thinking:            | function that searches for a value in a Binary Search Tree			|
-| 28 BST - Remove	      | function that removes a node from a Binary Search Tree				|
-| 29 Big O #BST		      | the average time complexities of those operations on a Binary Search Tree	|
-|     	     		      | - Inserting the value n  	             	       	       	     	        |
-|			      | - Removing the node with the value n				     		|
-|			      | - Searching for a node in a BST of size n		         		|
-| 30 Is AVL 		      | function that checks if a binary tree is a valid AVL Tree   			|
+| Task					| Descriptions									|
+|---------------------------------------|-------------------------------------------------------------------------------|
+| 19 (100) Lowest common ancestor	| function that finds the lowest common ancestor of two nodes			|
+| 20 (101) Level-order traversal    	| function that goes through a binary tree using level-order traversal		|
+| 21 (102) Is complete       	      	| function that checks if a binary tree is complete      	   		|
+| 22 (103) Rotate left              	| function that performs a left-rotation on a binary tree			|
+| 23 (104) Rotate right		    	| function that performs a right-rotation on a binary tree			|
+| 24 (110) Is BST 		      	| function that checks if a binary tree is a valid Binary Search Tree		|
+| 25 (111) BST - Insert 	      	| function that inserts a value in a Binary Search Tree				|
+| 26 (112) BST - Array to BST	      	| function that builds a Binary Search Tree from an array	   	  	|
+| 27 (113) BST - Search   		| function that searches for a value in a Binary Search Tree			|
+| 28 (114) BST - Remove	:thinking:		| function that removes a node from a Binary Search Tree			|
+| 29 (115) Big O #BST		      	| the average time complexities of those operations on a Binary Search Tree	|
+|      	     		      		| - Inserting the value n  	             	       	       	     	        |
+|			      		| - Removing the node with the value n				     		|
+|			      		| - Searching for a node in a BST of size n		         		|
+| 30 (120) Is AVL 			| function that checks if a binary tree is a valid AVL Tree   			|
