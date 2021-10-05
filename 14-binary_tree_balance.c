@@ -9,6 +9,8 @@ int binary_tree_balance(const binary_tree_t *tree)
 {
 	int left_tr, right_tr;
 
+	if (!tree)
+		return (0);
 	if (!tree->left)
 		left_tr = 0;
 	else
