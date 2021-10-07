@@ -35,7 +35,7 @@
 | 18 Uncle          | function that finds the uncle of a node					|
 
 #### Advanced: (file for no. 19 starts with 100, etc)
-(progress: 40% completed):radioactive:
+(progress: 48% completed):radioactive:
 
 | Task					| Descriptions									|
 |---------------------------------------|-------------------------------------------------------------------------------|
