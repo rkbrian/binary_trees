@@ -18,7 +18,7 @@ bst_t *bst_remove(bst_t *root, int value)
 		return (NULL);
 	}
 	tmp = bst_search(root, value);
-	if (tmp->left && tmp->right && (tmp->right->left || tmp->right->right))
+	if (tmp->left && tmp->right && tmp->right->left)
 	{
 		new_node = new_root_inorder(tmp);
 		if (new_node->parent->left == new_node)
@@ -28,14 +28,10 @@ bst_t *bst_remove(bst_t *root, int value)
 		tmp->left->parent = new_node, tmp->right->parent = new_node;
 		new_node->left = tmp->left, new_node->right = tmp->right;
 	}
-	else if (tmp->right)
-	{
-		new_node = tmp->right, new_node->parent = tmp->parent;
-		if (tmp->left)
-			new_node->left = tmp->left, tmp->left->parent = new_node;
-	}
 	else if (tmp->left)
 		new_node = tmp->left, new_node->parent = tmp->parent;
+	else if (tmp->right)
+		new_node = tmp->right, new_node->parent = tmp->parent;
 
 	if (tmp->parent && (tmp->parent->left == tmp))
 		tmp->parent->left = new_node;
