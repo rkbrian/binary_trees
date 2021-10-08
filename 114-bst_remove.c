@@ -8,7 +8,7 @@
  */
 bst_t *bst_remove(bst_t *root, int value)
 {
-	bst_t *tmp = NULL, *new_node = NULL;
+	bst_t *tmp = NULL, *node = NULL;
 
 	if (!root)
 		return (NULL);
@@ -20,35 +20,31 @@ bst_t *bst_remove(bst_t *root, int value)
 	tmp = bst_search(root, value);
 	if (tmp->left && tmp->right && tmp->right->left)
 	{
-		new_node = new_root_inorder(tmp);
-		if (new_node->parent->left == new_node)
-			new_node->parent->left = NULL;
+		node = new_root_inorder(tmp);
+		if (node->parent->left == node)
+			node->parent->left = NULL;
 		else
-			new_node->parent->right = NULL;
-		tmp->left->parent = new_node, tmp->right->parent = new_node;
-		new_node->left = tmp->left, new_node->right = tmp->right;
+			node->parent->right = NULL;
+		tmp->left->parent = node, tmp->right->parent = node;
+		node->left = tmp->left, node->right = tmp->right;
 	}
 	else if (tmp->right)
 	{
-		new_node = tmp->right, new_node->parent = tmp->parent;
+		node = tmp->right, node->parent = tmp->parent, node->left = tmp->left;
 		if (tmp->left)
-			tmp->left->parent = new_node;
+			tmp->left->parent = node;
 	}
 	else if (tmp->left)
-		new_node = tmp->left, new_node->parent = tmp->parent;
-	else
-	{
-		free(tmp);
-		return (root);
-	}
+		node = tmp->left, node->parent = tmp->parent;
+
 	if (tmp->parent && (tmp->parent->left == tmp))
-		tmp->parent->left = new_node;
+		tmp->parent->left = node;
 	else if (tmp->parent)
-		tmp->parent->right = new_node;
-	if (tmp->parent)
-		new_node->parent = tmp->parent;
-	else
-		new_node->parent = NULL, root = new_node;
+		tmp->parent->right = node;
+	if (tmp->parent && node)
+		node->parent = tmp->parent;
+	else if (node)
+		node->parent = NULL, root = node;
 	free(tmp);
 	return (root);
 }
