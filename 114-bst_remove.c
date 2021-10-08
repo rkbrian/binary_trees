@@ -32,7 +32,11 @@ bst_t *bst_remove(bst_t *root, int value)
 		new_node = tmp->left, new_node->parent = tmp->parent;
 	else if (tmp->right)
 		new_node = tmp->right, new_node->parent = tmp->parent;
-
+	else
+	{
+		free(tmp);
+		return (root);
+	}
 	if (tmp->parent && (tmp->parent->left == tmp))
 		tmp->parent->left = new_node;
 	else if (tmp->parent)
@@ -63,7 +67,7 @@ bst_t *new_root_inorder(bst_t *tree)
 			if (current->left)
 				current = current->left;
 			else
-				current = current->right;
+				return (current);
 			if (current && (current->left == NULL) && (current->right == NULL))
 				break;
 		}
