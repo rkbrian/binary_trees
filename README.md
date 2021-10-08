@@ -35,7 +35,7 @@
 | 18 Uncle          | function that finds the uncle of a node					|
 
 #### Advanced: (file for no. 19 starts with 100, etc)
-(progress: 48% completed):radioactive:
+(progress: 57% completed):radioactive:
 
 | Task					| Descriptions									|
 |---------------------------------------|-------------------------------------------------------------------------------|
@@ -48,9 +48,14 @@
 | 25 (111) BST - Insert 	      	| function that inserts a value in a Binary Search Tree				|
 | 26 (112) BST - Array to BST	      	| function that builds a Binary Search Tree from an array	   	  	|
 | 27 (113) BST - Search   		| function that searches for a value in a Binary Search Tree			|
-| 28 (114) BST - Remove	:thinking:		| function that removes a node from a Binary Search Tree			|
+| 28 (114) BST - Remove			| function that removes a node from a Binary Search Tree			|
 | 29 (115) Big O #BST		      	| the average time complexities of those operations on a Binary Search Tree	|
 |      	     		      		| - Inserting the value n  	             	       	       	     	        |
 |			      		| - Removing the node with the value n				     		|
 |			      		| - Searching for a node in a BST of size n		         		|
 | 30 (120) Is AVL 			| function that checks if a binary tree is a valid AVL Tree   			|
+| 31 (121) AVL - Insert :thinking:	| function that inserts a value in an AVL Tree	       				|
+| 35. Big O #AVL Tree			| the average time complexities of those operations on an AVL Tree		|
+|     	    	 			| - Inserting the value n	   	 	       	      			|
+|					| - Removing the node with the value n						|
+|					| - Searching for a node in an AVL tree of size n				|
