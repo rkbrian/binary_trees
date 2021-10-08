@@ -28,10 +28,14 @@ bst_t *bst_remove(bst_t *root, int value)
 		tmp->left->parent = new_node, tmp->right->parent = new_node;
 		new_node->left = tmp->left, new_node->right = tmp->right;
 	}
+	else if (tmp->right)
+	{
+		new_node = tmp->right, new_node->parent = tmp->parent;
+		if (tmp->left)
+			tmp->left->parent = new_node;
+	}
 	else if (tmp->left)
 		new_node = tmp->left, new_node->parent = tmp->parent;
-	else if (tmp->right)
-		new_node = tmp->right, new_node->parent = tmp->parent;
 	else
 	{
 		free(tmp);
