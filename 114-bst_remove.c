@@ -8,7 +8,7 @@
  */
 bst_t *bst_remove(bst_t *root, int value)
 {
-	bst_t *tmp = NULL, *new_root = NULL;
+	bst_t *tmp = NULL, *new_node = NULL;
 
 	if (!root)
 		return (NULL);
@@ -18,16 +18,35 @@ bst_t *bst_remove(bst_t *root, int value)
 		return (NULL);
 	}
 	tmp = bst_search(root, value);
-	new_root = new_root_inorder(root);
-	if (tmp->left && tmp->left != new_root)
-		tmp->left->parent = new_root;
-	if (tmp->right && tmp->right != new_root)
-		tmp->right->parent = new_root;
-	new_root->parent = NULL;
-	new_root->left = tmp->left;
-	new_root->right = tmp->right;
-	free(root);
-	return (new_root);
+	if (tmp->left && tmp->right && (tmp->right->left || tmp->right->right))
+	{
+		new_node = new_root_inorder(tmp);
+		if (new_node->parent->left == new_node)
+			new_node->parent->left = NULL;
+		else
+			new_node->parent->right = NULL;
+		tmp->left->parent = new_node, tmp->right->parent = new_node;
+		new_node->left = tmp->left, new_node->right = tmp->right;
+	}
+	else if (tmp->right)
+	{
+		new_node = tmp->right, new_node->parent = tmp->parent;
+		if (tmp->left)
+			new_node->left = tmp->left, tmp->left->parent = new_node;
+	}
+	else if (tmp->left)
+		new_node = tmp->left, new_node->parent = tmp->parent;
+
+	if (tmp->parent && (tmp->parent->left == tmp))
+		tmp->parent->left = new_node;
+	else if (tmp->parent)
+		tmp->parent->right = new_node;
+	if (tmp->parent)
+		new_node->parent = tmp->parent;
+	else
+		new_node->parent = NULL, root = new_node;
+	free(tmp);
+	return (root);
 }
 
 /**
@@ -37,15 +56,24 @@ bst_t *bst_remove(bst_t *root, int value)
  */
 bst_t *new_root_inorder(bst_t *tree)
 {
-	if (tree)
-		new_root_inorder(tree->left);
-	if (!tree->left && !tree->right)
-		return (tree);
-	if (tree)
-		new_root_inorder(tree->right);
-	return (NULL);
+	bst_t *current = NULL; /* Morris Traversal, no stack */
+
+	current = tree;
+	if (current->right)
+	{
+		current = current->right;
+		while (current)
+		{
+			if (current->left)
+				current = current->left;
+			else
+				current = current->right;
+			if (current && (current->left == NULL) && (current->right == NULL))
+				break;
+		}
+	}
+	return (current);
 }
-#include "binary_trees.h"
 
 /**
  * bst_search - search for a value in a Binary Search Tree
