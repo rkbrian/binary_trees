@@ -70,6 +70,7 @@ binary_tree_t *queue_remove(queue_q *queen, const binary_tree_t *node);
 int beast_wars(const binary_tree_t *tree, int root_num, int direction);
 bst_t *new_root_inorder(bst_t *tree);
 binary_tree_t *basic_tree(void);
+void avl_rotator(avl_t *tmp, int lower_node);
 /* Advanced */
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 				     const binary_tree_t *second);
@@ -83,5 +84,6 @@ bst_t *array_to_bst(int *array, size_t size);
 bst_t *bst_search(const bst_t *tree, int value);
 bst_t *bst_remove(bst_t *root, int value);
 int binary_tree_is_avl(const binary_tree_t *tree);
+avl_t *avl_insert(avl_t **tree, int value);
 
 #endif /* BINARY_TREES_H */
