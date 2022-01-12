@@ -71,6 +71,7 @@ int beast_wars(const binary_tree_t *tree, int root_num, int direction);
 bst_t *new_root_inorder(bst_t *tree);
 binary_tree_t *basic_tree(void);
 void avl_rotator(avl_t *tmp, int lower_node);
+avl_t *game_of_thrones(avl_t *tmp);
 avl_t *new_root_inorder(avl_t *tree);
 avl_t *avl_search(const avl_t *tree, int value);
 void avl_chunk_rotator(avl_t *tmp);

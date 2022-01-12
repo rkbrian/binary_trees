@@ -18,6 +18,33 @@ avl_t *avl_remove(avl_t *root, int value)
 		return (NULL);
 	}
 	tmp = avl_search(root, value), imba = tmp->parent;
+	node = game_of_thrones(tmp);
+	if (tmp->parent && (tmp->parent->left == tmp)) /*successor linking*/
+		tmp->parent->left = node;
+	else if (tmp->parent)
+		tmp->parent->right = node;
+	if (tmp->parent && node)
+		node->parent = tmp->parent;
+	else if (node)
+		node->parent = NULL, root = node;
+	free(tmp);
+	if (!imba)
+		imba = node;
+	avl_chunk_rotator(imba);
+	while (root->parent)
+		root = root->parent;
+	return (root);
+}
+
+/**
+ * game_of_thrones - find the successor of the node-to-be-usurped and link branches
+ * @tmp: node to be deleted (usurped)
+ * Return: the successor (usurper)
+ */
+avl_t *game_of_thrones(avl_t *tmp)
+{
+	avl_t *node = NULL;
+
 	if (tmp->left && tmp->right && tmp->right->left) /*successor finding*/
 	{
 		node = new_root_inorder(tmp);
@@ -36,19 +63,7 @@ avl_t *avl_remove(avl_t *root, int value)
 	}
 	else if (tmp->left)
 		node = tmp->left, node->parent = tmp->parent;
-	if (tmp->parent && (tmp->parent->left == tmp)) /*successor linking*/
-		tmp->parent->left = node;
-	else if (tmp->parent)
-		tmp->parent->right = node;
-	if (tmp->parent && node)
-		node->parent = tmp->parent;
-	else if (node)
-		node->parent = NULL, root = node;
-	free(tmp);
-	if (!imba)
-		imba = node;
-	avl_chunk_rotator(imba);
-	return (root);
+	return (node);
 }
 
 /**
