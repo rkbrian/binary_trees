@@ -25,13 +25,13 @@ avl_t *avl_insert(avl_t **tree, int value)
 		else if (tmp->n > value) /*insert to the left*/
 		{
 			tmp->left = binary_tree_node(tmp, value);
-			ret_node = tmp->left, lower_node = 1, tmp = tmp->parent;
+			ret_node = tmp->left, lower_node = 1;
 			break;
 		}
 		else if (tmp->n < value) /*insert to the right*/
 		{
 			tmp->right = binary_tree_node(tmp, value);
-			ret_node = tmp->right, lower_node = -1, tmp = tmp->parent;
+			ret_node = tmp->right, lower_node = -1;
 			break;
 		}
 	}
