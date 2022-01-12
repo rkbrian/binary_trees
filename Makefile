@@ -4,6 +4,9 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 PTREE = binary_tree_print.c
 NNODE = 0-binary_tree_node.c
 INSN = 2-binary_tree_insert_right.c
+DELN = 3-binary_tree_delete.c
+BALA = 14-binary_tree_balance.c
+ROTA = 103-binary_tree_rotate_left.c 104-binary_tree_rotate_right.c
 # mandatory tasks
 0-node: 	$(PTREE) $(NNODE) 0-main.c
 	$(CC) $(CFLAGS) $^ -o $@
@@ -11,7 +14,7 @@ INSN = 2-binary_tree_insert_right.c
 	$(CC) $(CFLAGS) $^ -o $@
 2-right: 	$(PTREE) $(NNODE) $(INSN) 2-main.c
 	$(CC) $(CFLAGS) $^ -o $@
-3-del: 		$(PTREE) $(NNODE) $(INSN) 3-main.c 3-binary_tree_delete.c
+3-del: 		$(PTREE) $(NNODE) $(INSN) $(DELN) 3-main.c
 	$(CC) $(CFLAGS) $^ -o $@
 4-leaf: 	$(PTREE) $(NNODE) $(INSN) 4-binary_tree_is_leaf.c 4-main.c
 	$(CC) $(CFLAGS) $^ -o $@
@@ -33,7 +36,7 @@ INSN = 2-binary_tree_insert_right.c
 	$(CC) $(CFLAGS) $^ -o $@
 13-nodes: 	$(PTREE) $(NNODE) $(INSN) 13-binary_tree_nodes.c 13-main.c
 	$(CC) $(CFLAGS) $^ -o $@
-14-balance: 	$(PTREE) $(NNODE) $(INSN) 14-binary_tree_balance.c 14-main.c 1-binary_tree_insert_left.c
+14-balance: 	$(PTREE) $(NNODE) $(INSN) $(BALA) 14-main.c 1-binary_tree_insert_left.c
 	$(CC) $(CFLAGS) $^ -o $@
 15-full: 	$(PTREE) $(NNODE) $(INSN) 15-binary_tree_is_full.c 15-main.c
 	$(CC) $(CFLAGS) $^ -o $@
@@ -46,9 +49,9 @@ INSN = 2-binary_tree_insert_right.c
 # advanced tasks
 100-ancestor: 	$(PTREE) $(NNODE) 100-main.c 100-binary_trees_ancestor.c
 	$(CC) $(CFLAGS) $^ -o $@
-101-lvl: 	$(PTREE) $(NNODE) 101-main.c 101-binary_tree_levelorder.c 3-binary_tree_delete.c
+101-lvl: 	$(PTREE) $(NNODE) $(DELN) 101-main.c 101-binary_tree_levelorder.c
 	$(CC) $(CFLAGS) $^ -o $@
-102-complete: 	$(PTREE) $(NNODE) 102-main.c 102-binary_tree_is_complete.c 3-binary_tree_delete.c
+102-complete: 	$(PTREE) $(NNODE) $(DELN) 102-main.c 102-binary_tree_is_complete.c
 	$(CC) $(CFLAGS) $^ -o $@
 103-rotl: 	$(PTREE) $(NNODE) 103-binary_tree_rotate_left.c 103-main.c
 	$(CC) $(CFLAGS) $^ -o $@
@@ -62,12 +65,14 @@ INSN = 2-binary_tree_insert_right.c
 	$(CC) $(CFLAGS) $^ -o $@
 113-bst_search: $(PTREE) $(NNODE) 113-bst_search.c 113-main.c 112-array_to_bst.c 111-bst_insert.c
 	$(CC) $(CFLAGS) $^ -o $@
-114-bst_rm: 	$(PTREE) $(NNODE) 114-bst_remove.c 114-main.c 112-array_to_bst.c 111-bst_insert.c 3-binary_tree_delete.c
+114-bst_rm: 	$(PTREE) $(NNODE) $(DELN) 114-bst_remove.c 114-main.c 112-array_to_bst.c 111-bst_insert.c
 	$(CC) $(CFLAGS) $^ -o $@
 120-is_avl: 	$(PTREE) $(NNODE) 120-main.c 120-binary_tree_is_avl.c
 	$(CC) $(CFLAGS) $^ -o $@
-121-avl_insert: $(PTREE) $(NNODE) 121-avl_insert.c 121-main.c 14-binary_tree_balance.c 103-binary_tree_rotate_left.c 104-binary_tree_rotate_right.c
+121-avl_insert: $(PTREE) $(NNODE) $(BALA) $(ROTA) 121-avl_insert.c 121-main.c
+	$(CC) $(CFLAGS) $^ -o $@
+122-avl_array:	$(PTREE) $(NNODE) $(BALA) $(ROTA) 122-array_to_avl.c 122-main.c 121-avl_insert.c
 	$(CC) $(CFLAGS) $^ -o $@
 # still working on
-122-avl_array:	$(PTREE) $(NNODE) 122-array_to_avl.c 122-main.c 121-avl_insert.c 14-binary_tree_balance.c 103-binary_tree_rotate_left.c 104-binary_tree_rotate_right.c
+123-avl_rm:	$(PTREE) $(NNODE) $(DELN) $(BALA) $(ROTA) 123-avl_remove.c 123-main.c 122-array_to_avl.c 121-avl_insert.c
 	$(CC) $(CFLAGS) $^ -o $@

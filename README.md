@@ -54,8 +54,10 @@
 |			      		| - Removing the node with the value n				     		|
 |			      		| - Searching for a node in a BST of size n		         		|
 | 30 (120) Is AVL 			| function that checks if a binary tree is a valid AVL Tree   			|
-| 31 (121) AVL - Insert (90% working)	| function that inserts a value in an AVL Tree	       				|
-| 32 (122) AVL - Array to AVL :thinking:	| function that builds an AVL tree from an array       				|
+| 31 (121) AVL - Insert	                | function that inserts a value in an AVL Tree	       				|
+| 32 (122) AVL - Array to AVL   	| function that builds an AVL tree from an array       				|
+| 33 (123) AVL - Remove :thinking:            	| function that removes a node from an AVL tree       				|
+| 34 (124) AVL - From sorted array :thinking:   	| function that builds an AVL tree from an array       				|
 | 35. Big O #AVL Tree			| the average time complexities of those operations on an AVL Tree		|
 |     	    	 			| - Inserting the value n	   	 	       	      			|
 |					| - Removing the node with the value n						|

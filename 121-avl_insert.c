@@ -43,7 +43,7 @@ avl_t *avl_insert(avl_t **tree, int value)
 
 /**
  * avl_rotator - rotate freshly inserted AVL tree if necessary
- * @tmp: grandparent of the freshly inserted node.
+ * @tmp: parent of the freshly inserted node.
  * @lower_node: flag indicating the position of the freshly inserted node,
  *  1 if on left of its parent, -1 if on right
  */
