@@ -69,7 +69,7 @@ void avl_rotator(avl_t *tmp, int lower_node)
 		else if (avl_balance < -1 && lower_node == -1)
 			binary_tree_rotate_left(tmp); /*case right right, rotates left*/
 		avl_balance = binary_tree_balance(tmp);
-		if (avl_balance <=1 && avl_balance >= -1)
+		if (avl_balance <= 1 && avl_balance >= -1)
 			tmp = tmp->parent;
 	}
 }
