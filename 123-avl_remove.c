@@ -8,7 +8,7 @@
  */
 avl_t *avl_remove(avl_t *root, int value)
 {
-	avl_t *tmp = NULL, *node = NULL;
+	avl_t *tmp = NULL, *node = NULL, *imba = NULL;
 
 	if (!root)
 		return (NULL);
@@ -17,7 +17,7 @@ avl_t *avl_remove(avl_t *root, int value)
 		free(root);
 		return (NULL);
 	}
-	tmp = avl_search(root, value);
+	tmp = avl_search(root, value), imba = tmp->parent;
 	node = game_of_thrones(tmp);
 	if (tmp->parent && (tmp->parent->left == tmp)) /*successor linking*/
 		tmp->parent->left = node;
@@ -27,8 +27,10 @@ avl_t *avl_remove(avl_t *root, int value)
 		node->parent = tmp->parent;
 	else if (node)
 		node->parent = NULL, root = node;
+	if (node)
+		imba = node;
 	free(tmp);
-	avl_chunk_rotator(node);
+	avl_chunk_rotator(imba);
 	while (root->parent)
 		root = root->parent;
 	return (root);
