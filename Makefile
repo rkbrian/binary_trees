@@ -66,6 +66,8 @@ INSN = 2-binary_tree_insert_right.c
 	$(CC) $(CFLAGS) $^ -o $@
 120-is_avl: 	$(PTREE) $(NNODE) 120-main.c 120-binary_tree_is_avl.c
 	$(CC) $(CFLAGS) $^ -o $@
-# still working on
 121-avl_insert: $(PTREE) $(NNODE) 121-avl_insert.c 121-main.c 14-binary_tree_balance.c 103-binary_tree_rotate_left.c 104-binary_tree_rotate_right.c
+	$(CC) $(CFLAGS) $^ -o $@
+# still working on
+122-avl_array:	$(PTREE) $(NNODE) 122-array_to_avl.c 122-main.c 121-avl_insert.c 14-binary_tree_balance.c 103-binary_tree_rotate_left.c 104-binary_tree_rotate_right.c
 	$(CC) $(CFLAGS) $^ -o $@
