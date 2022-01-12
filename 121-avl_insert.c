@@ -36,6 +36,8 @@ avl_t *avl_insert(avl_t **tree, int value)
 		}
 	}
 	avl_rotator(tmp, lower_node);
+	while ((*tree)->parent)
+		*tree = (*tree)->parent;
 	return (ret_node);
 }
 
