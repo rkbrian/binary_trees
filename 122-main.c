@@ -19,5 +19,16 @@ int main(void)
     if (!tree)
         return (1);
     binary_tree_print(tree);
+    binary_tree_delete(tree);
     return (0);
+}
+
+void binary_tree_delete(binary_tree_t *tree)
+{
+	if (tree) /* depth-first search */
+	{
+		binary_tree_delete(tree->left);
+		binary_tree_delete(tree->right);
+		free(tree); /* post-order traversal */
+	}
 }

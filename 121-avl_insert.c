@@ -54,34 +54,22 @@ void avl_rotator(avl_t *tmp, int lower_node)
 	while (tmp)
 	{
 		avl_balance = binary_tree_balance(tmp);
-		if (avl_balance > 1) /*left*/
+		if (avl_balance > 1 && lower_node == 1)
+			binary_tree_rotate_right(tmp); /*case left left, rotates right*/
+		else if (avl_balance > 1 && lower_node == -1)
 		{
-			if (lower_node == 1) /*case left left, rotates right*/
-			{
-				binary_tree_rotate_right(tmp);
-				break;
-			}
-			else if (lower_node == -1) /*case left right, rotates left then right*/
-			{
-				binary_tree_rotate_left(tmp->left);
-				binary_tree_rotate_right(tmp);
-				break;
-			}
+			binary_tree_rotate_left(tmp->left);
+			binary_tree_rotate_right(tmp); /*case left right, rotates left then right*/
 		}
-		else if (avl_balance < -1) /*case right left*/
+		else if (avl_balance < -1 && lower_node == 1)
 		{
-			if (lower_node == 1) /*case right left, rotates right then left*/
-			{
-				binary_tree_rotate_right(tmp->right);
-				binary_tree_rotate_left(tmp);
-				break;
-			}
-			else if (lower_node == -1) /*case right right, rotates left*/
-			{
-				binary_tree_rotate_left(tmp);
-				break;
-			}
+			binary_tree_rotate_right(tmp->right);
+			binary_tree_rotate_left(tmp); /*case right left, rotates right then left*/
 		}
-		tmp = tmp->parent;
+		else if (avl_balance < -1 && lower_node == -1)
+			binary_tree_rotate_left(tmp); /*case right right, rotates left*/
+		avl_balance = binary_tree_balance(tmp);
+		if (avl_balance <=1 && avl_balance >= -1)
+			tmp = tmp->parent;
 	}
 }
