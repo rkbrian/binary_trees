@@ -23,6 +23,7 @@ avl_t *sorted_array_to_avl(int *array, size_t size)
  * @array: array of integers
  * @start: start of index region for the target array value
  * @end: end of index region for the target array value
+ * Return: new node
  */
 avl_t *build_avl(int *array, int start, int end)
 {
@@ -32,6 +33,8 @@ avl_t *build_avl(int *array, int start, int end)
 	if (start <= end)
 	{
 		node = binary_tree_node(NULL, array[mid]);
+		if (!node)
+			return (NULL);
 		node->left = build_avl(array, start, mid - 1);
 		if (node->left)
 			node->left->parent = node;
