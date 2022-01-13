@@ -1,4 +1,6 @@
-# memo
+# Memo
+# Theoretically every compilation here needs to include DELN to free allocation,
+# but the most given test files didn't include the freeing.
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic
 PTREE = binary_tree_print.c
@@ -73,6 +75,7 @@ ROTA = 103-binary_tree_rotate_left.c 104-binary_tree_rotate_right.c
 	$(CC) $(CFLAGS) $^ -o $@
 122-avl_array:	$(PTREE) $(NNODE) $(BALA) $(ROTA) 122-array_to_avl.c 122-main.c 121-avl_insert.c
 	$(CC) $(CFLAGS) $^ -o $@
-# still working on
 123-avl_rm:	$(PTREE) $(NNODE) $(DELN) $(BALA) $(ROTA) 123-avl_remove.c 123-main.c 122-array_to_avl.c 121-avl_insert.c
+	$(CC) $(CFLAGS) $^ -o $@
+124-avl_sorted:	$(PTREE) $(NNODE) 124-main.c 124-sorted_array_to_avl.c
 	$(CC) $(CFLAGS) $^ -o $@

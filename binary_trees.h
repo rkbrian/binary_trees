@@ -75,7 +75,7 @@ avl_t *game_of_thrones(avl_t *tmp);
 avl_t *new_root_inorder(avl_t *tree);
 avl_t *avl_search(const avl_t *tree, int value);
 void avl_chunk_rotator(avl_t *tmp);
-
+avl_t *build_avl(int *array, int start, int end);
 /* Advanced */
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 				     const binary_tree_t *second);
@@ -92,5 +92,6 @@ int binary_tree_is_avl(const binary_tree_t *tree);
 avl_t *avl_insert(avl_t **tree, int value);
 avl_t *array_to_avl(int *array, size_t size);
 avl_t *avl_remove(avl_t *root, int value);
+avl_t *sorted_array_to_avl(int *array, size_t size);
 
 #endif /* BINARY_TREES_H */
